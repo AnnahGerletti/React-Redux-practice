@@ -1,0 +1,12 @@
+.title {
+  color: darkslateblue;
+}
+
+.container {
+  background-color: lightslategray;
+  padding-bottom: 1em;
+}
+
+.searchBar {
+  align-items: center;
+}

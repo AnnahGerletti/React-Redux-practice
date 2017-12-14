@@ -7,12 +7,25 @@ import Header from "./component/Header"
 
 const API_key = "AIzaSyAm9Eq9NO69VKGqSU02R6fSb9YDCKkWv0M"
 
-YTsearch({key: API_key, term: "cats" }, function(data){
-  console.log(data)
-})
 
 
 class App extends Component {
+  constructor(props){
+    super(props)
+
+    this.state = {videos:[]}
+
+YTsearch({key: API_key, term: "cats" }, (videos) => {
+ this.setState({videos})
+})
+  }
+ 
+  // updateVideoList(e){
+  //   let videos = this.state.videos
+  //   videos[e.target.name] = e.target.value
+  //   this.setState({videos})
+  // }
+
   render (){
   return (
     <div>

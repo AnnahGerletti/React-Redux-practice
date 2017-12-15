@@ -10,6 +10,8 @@ render (){
     return (
     <div className = 'searchBar'>
      <input
+       name = 'name'
+       placeholder = 'What are you in the mood for today?'
        value = {this.state.term}
        onChange ={event => this.setState({term:event.target.value})}/>
     </div>

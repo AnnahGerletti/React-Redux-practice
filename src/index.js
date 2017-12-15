@@ -32,6 +32,7 @@ YTsearch({key: API_key, term: "cats" }, (videos) => {
     <div>
       <Header />
       <SearchBar />
+      <VideoList videos = {this.state.videos}/>
     </div>
   )}
   }

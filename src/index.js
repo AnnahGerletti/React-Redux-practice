@@ -5,6 +5,7 @@ import YTsearch from 'youtube-api-search'
 import SearchBar from "./component/Search_bar"
 import Header from "./component/Header"
 import VideoList from "./component/Video_List"
+import VideoDetail from "./component/Video_detail"
 
 const API_key = "AIzaSyAm9Eq9NO69VKGqSU02R6fSb9YDCKkWv0M"
 
@@ -32,6 +33,7 @@ YTsearch({key: API_key, term: "cats" }, (videos) => {
     <div>
       <Header />
       <SearchBar />
+      <VideoDetail video = {this.state.videos[0]}/>
       <VideoList videos = {this.state.videos}/>
     </div>
   )}

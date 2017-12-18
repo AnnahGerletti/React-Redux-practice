@@ -1,5 +1,12 @@
+.container {
+  height: 100%;
+  width: 1000%;
+  background-image: url(./public/dots-bg.jpg)
+}
+
 .title {
   color: darkslateblue;
+  margin-top: 5px;
 }
 
 .searchBar {
@@ -15,10 +22,6 @@
   max-block-size: 10em;
 }
 
-.embed-responsive-item {
-  max-width: 75%;
-  text-align: center;
-}
 
 .video-item img{
   max-width: 64px;
@@ -28,8 +31,18 @@
   margin-top: 10px;
   padding: 10px;
   border: 1px solid deeppink;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-radius: 4px;
-  max-width: 1000px
+  max-width: 50em
+}
+
+.embeembed-esponsive {
+  max-width: 75%;
+  text-align: center;
+}
+
+.list-group {
+  padding-bottom: 1.5em;
 }
 
 .list-group-item {

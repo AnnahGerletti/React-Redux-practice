@@ -42,7 +42,7 @@ YTsearch({key: API_key, term: "cats" }, (videos) => {
       <SearchBar />
       <VideoDetail video = {this.state.selectedVideo}/>
       <VideoList 
-        onVideoClick = {selectVideo => this.setState({selectedVideo})}
+        onVideoClick = {selectedVideo => this.setState({selectedVideo})}
         videos = {this.state.videos}/>
     </div>
   )}

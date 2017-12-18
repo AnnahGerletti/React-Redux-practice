@@ -2,9 +2,48 @@
   color: darkslateblue;
 }
 
-.container {
-  background-color: lightslategray;
+.searchBar {
+  margin: 20px;
+  text-align: center
 }
+
+.searchBar input{
+  width: 75%;
+}
+
+.media-object{
+  max-block-size: 10em;
+}
+
+.embed-responsive-item {
+  max-width: 75%;
+  text-align: center;
+}
+
+.video-item img{
+  max-width: 64px;
+}
+
+.video-detail .details{
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid deeppink;
+  border-radius: 4px;
+  max-width: 1000px
+}
+
+.list-group-item {
+  cursor: pointer;
+}
+
+.list-group-item:hover {
+  background-color: orangered; 
+}
+
+
+/*.container {
+  background-color: lightslategray;
+}*/
 
 /*.searchBar {
   align-items: center;

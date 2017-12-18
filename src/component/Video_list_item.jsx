@@ -6,7 +6,7 @@ const VideoListItem = ({video, onVideoClick}) => {
   const title = video.snippet.title
 
   return (
-  <li onClick = {() => onVideoClick(video)} className = 'list-group-item'>
+  <li onClick = { () => onVideoClick(video)} className = 'list-group-item'>
    <div className = 'vidoe-list media'>
       <div className = 'media-left'>
         <img className = 'media-object' src = {imgURL}/>

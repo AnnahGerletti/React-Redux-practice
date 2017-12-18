@@ -34,9 +34,7 @@ YTsearch({key: API_key, term: "cats" }, (videos) => {
   //   this.setState({videos})
   // }
 
-  onVideoClick = (selectedVideo) => {
-    this.setState.selectedVideo
-  }
+
   render (){
   return (
     <div>

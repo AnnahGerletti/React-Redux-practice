@@ -22,3 +22,5 @@ const VideoDetail = ({video}) => {
 }
 
 export default VideoDetail
+
+// video that is passed into the VideoDetail compt usually would get passed as props, but ES6 allows us to specify what we want to pass, this is the API Object ({video}) - has to be warped in {}

@@ -13,9 +13,14 @@ render (){
        name = 'name'
        placeholder = 'Search Here'
        value = {this.state.term}
-       onChange ={event => this.setState({term:event.target.value})}/>
+       onChange ={event => this.onInputChange(event.target.value)}/>
     </div>
   )
 }
+
+onInputChange (term) {
+  this.setState({term})
+  this.props.onNewSearch(term)
+  }
 }
 export default SearchBar

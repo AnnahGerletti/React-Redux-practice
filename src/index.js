@@ -17,29 +17,24 @@ class App extends Component {
 
     this.state = {
       videos:[],
-      selectedVideo: null
+      selectedVideo: null,
     }
-
-YTsearch({key: API_key, term: "cats" }, (videos) => {
- this.setState({
-   videos:videos,
-   selectedVideo:videos[0]
-  })
-})
-  }
+    this.videoSearch('cats')
+}
  
-  // updateVideoList(e){
-  //   let videos = this.state.videos
-  //   videos[e.target.name] = e.target.value
-  //   this.setState({videos})
-  // }
-
-
+videoSearch (term) {
+  YTsearch({key: API_key, term: term }, (videos) => {
+  this.setState({
+    videos:videos,
+    selectedVideo:videos[0]
+      })
+    })
+ }
   render (){
   return (
     <div>
       <Header />
-      <SearchBar />
+      <SearchBar onNewSearch = {term => this.videoSearch(term)}/>
       <VideoDetail video = {this.state.selectedVideo}/>
       <VideoList 
         onVideoClick = {selectedVideo => this.setState({selectedVideo})}

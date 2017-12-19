@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import YTsearch from 'youtube-api-search'
+import _ from 'lodash'
 
 import SearchBar from "./component/Search_bar"
 import Header from "./component/Header"

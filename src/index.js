@@ -1,7 +1,7 @@
+import _ from 'lodash'
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import YTsearch from 'youtube-api-search'
-import _ from 'lodash'
 
 import SearchBar from "./component/Search_bar"
 import Header from "./component/Header"
@@ -32,10 +32,13 @@ videoSearch (term) {
     })
  }
   render (){
+    
+    const slowvideoSearch = _.debounce((term) => {this.videoSearch(term)}, 300)
+
   return (
     <div>
       <Header />
-      <SearchBar onNewSearch = {term => this.videoSearch(term)}/>
+      <SearchBar onNewSearch = {slowvideoSearch}/>
       <VideoDetail video = {this.state.selectedVideo}/>
       <VideoList 
         onVideoClick = {selectedVideo => this.setState({selectedVideo})}
